@@ -20,18 +20,35 @@ nav{height:78px;display:flex;align-items:center;justify-content:space-between;pa
 .vertical{position:absolute;right:4vw;bottom:100px;writing-mode:vertical-rl;letter-spacing:5px;font:700 12px "Barlow Condensed";color:#ffffff75;z-index:2}
 .section{padding:110px 8vw}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:48px}.kicker{color:var(--red);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700}.section h2{font:800 clamp(48px,8vw,92px)/.9 "Barlow Condensed";text-transform:uppercase;margin:12px 0 0}.section-head p{max-width:350px;color:var(--muted);font-size:13px;line-height:1.7}
 .intro{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center;background:#101010}.intro-photo{min-height:520px;background:url("https://images.daznservices.com/di/library/GOAL/3c/db/cristiano-ronaldo_vrowld623jo71v1r2d3eubv68.png?quality=85&w=1400") center/cover;filter:grayscale(100%);position:relative}.intro-photo:after{content:"CR7";position:absolute;bottom:-32px;right:-15px;font:900 130px "Barlow Condensed";color:var(--red)}.intro-copy h3{font:800 50px/1 "Barlow Condensed";margin:10px 0 20px}.intro-copy p{color:#aaa;font-size:14px;line-height:1.9}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}.stat{border-top:1px solid var(--red);padding-top:15px}.stat strong{display:block;font:800 42px "Barlow Condensed"}.stat span{font-size:9px;letter-spacing:2px;color:#999;text-transform:uppercase}
-.timeline{background:#0b0b0b}.timeline-list{border-top:1px solid var(--line)}.era{display:grid;grid-template-columns:130px 1fr 1fr;gap:25px;padding:28px 0;border-bottom:1px solid var(--line);align-items:center;transition:.25s}.era:hover{padding-left:14px;background:linear-gradient(90deg,#e21b2d12,transparent)}.era-year{font:800 30px "Barlow Condensed";color:var(--red)}.era h3{font:700 27px "Barlow Condensed";margin:0 0 5px;text-transform:uppercase}.era p{margin:0;color:#999;font-size:12px;line-height:1.6}.era-tag{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;text-align:right}
+.timeline{background:#0b0b0b}.timeline-list{border-top:1px solid var(--line)}
+.era{display:grid;grid-template-columns:130px 110px 1fr 1fr;gap:25px;padding:28px 0;border-bottom:1px solid var(--line);align-items:center;transition:.25s}.era:hover{padding-left:14px;background:linear-gradient(90deg,#e21b2d12,transparent)}.era-year{font:800 30px "Barlow Condensed";color:var(--red)}.era h3{font:700 27px "Barlow Condensed";margin:0 0 5px;text-transform:uppercase}.era p{margin:0;color:#999;font-size:12px;line-height:1.6}.era-tag{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;text-align:right}
+/* Logo CLB: ảnh PNG tách nền + đổ bóng */
+.era-logo{display:flex;align-items:center;justify-content:center;gap:10px;height:84px}
+.era-logo img{max-width:80px;max-height:80px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 8px 12px rgba(0,0,0,.85)) drop-shadow(0 0 14px rgba(255,255,255,.08));transition:transform .35s,filter .35s}
+.era:hover .era-logo img{transform:scale(1.14) translateY(-3px);filter:drop-shadow(0 12px 16px rgba(0,0,0,.9)) drop-shadow(0 0 20px rgba(226,27,45,.55))}
+.era-logo.duo img{max-width:52px;max-height:52px}
 .trophies{background:#111}.trophy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.trophy{background:#111;padding:30px 24px;min-height:180px;transition:.25s}.trophy:hover{background:#1a1112}.trophy .num{font:900 62px/.9 "Barlow Condensed";color:var(--red)}.trophy h3{font:700 19px "Barlow Condensed";text-transform:uppercase;margin:14px 0 6px}.trophy p{font-size:11px;color:#888;margin:0;line-height:1.5}
 .gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:220px 220px;gap:12px}.shot{position:relative;overflow:hidden;background:#222}.shot:first-child{grid-row:span 2}.shot img{width:100%;height:100%;object-fit:cover;filter:grayscale(35%);transition:.5s}.shot:hover img{transform:scale(1.06);filter:grayscale(0)}.shot label{position:absolute;bottom:15px;left:16px;font:700 23px "Barlow Condensed";text-transform:uppercase;text-shadow:0 2px 10px #000}
 .quote{padding:100px 8vw;text-align:center;background:var(--red)}.quote small{letter-spacing:5px;font-size:10px}.quote blockquote{font:900 clamp(42px,8vw,100px)/.9 "Barlow Condensed";text-transform:uppercase;margin:25px auto;max-width:1000px}.quote p{font-size:11px;letter-spacing:3px}
 footer{padding:35px 8vw;display:flex;justify-content:space-between;gap:20px;color:#777;font-size:10px;letter-spacing:2px;text-transform:uppercase;border-top:1px solid var(--line)}
 .toast{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;background:#050505f2;opacity:1;transition:opacity .7s,visibility .7s}.toast.hide{opacity:0;visibility:hidden;pointer-events:none}.intro-card{text-align:center;padding:30px}.intro-card .big7{font:900 clamp(140px,30vw,300px)/.75 "Barlow Condensed";color:#191919;-webkit-text-stroke:2px #333}.intro-card h2{font:900 clamp(48px,9vw,100px)/.9 "Barlow Condensed";margin:20px 0}.intro-card p{color:#999;font-size:12px;letter-spacing:3px;margin-bottom:28px}.enter{border:1px solid var(--red);color:#fff;background:transparent;padding:16px 35px;font:800 20px "Barlow Condensed";letter-spacing:3px;cursor:pointer}.enter:hover{background:var(--red)}
 .flash{position:fixed;inset:0;z-index:19;background:#fff;pointer-events:none;opacity:0}.flash.go{animation:flash .65s ease-out}@keyframes flash{0%{opacity:.9}100%{opacity:0}}
-@media(max-width:760px){nav{padding:0 5vw;height:65px}.navlinks{gap:12px;font-size:8px}.hero{min-height:690px;background-position:58% center}.hero-content{padding:0 6vw 90px}.hero h1{letter-spacing:-3px}.section{padding:75px 6vw}.section-head{display:block}.intro{grid-template-columns:1fr}.intro-photo{min-height:360px}.era{grid-template-columns:80px 1fr;gap:12px}.era-tag{grid-column:2;text-align:left}.era-year{font-size:23px}.trophy-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}.shot:first-child{grid-column:span 2;grid-row:auto}.vertical{display:none}footer{padding:25px 6vw;display:block;line-height:2.2}}
+/* Nút nhạc */
+.music{position:fixed;right:20px;bottom:20px;z-index:15;display:flex;align-items:center;gap:12px;background:#0d0d0dd9;border:1px solid #ffffff22;backdrop-filter:blur(8px);padding:8px 16px 8px 8px;border-radius:50px;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+.music button{width:42px;height:42px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:15px;cursor:pointer;transition:.2s;display:grid;place-items:center}.music button:hover{background:#ff3347;transform:scale(1.08)}
+.music .meta{line-height:1.2}.music .meta small{display:block;font-size:8px;letter-spacing:2px;color:#888;text-transform:uppercase}.music .meta b{font:700 15px "Barlow Condensed";letter-spacing:1px;text-transform:uppercase}
+.bars{display:flex;gap:2px;align-items:flex-end;height:16px}.bars i{width:3px;background:var(--red);height:4px;border-radius:1px}.music.playing .bars i{animation:eq .9s ease-in-out infinite}.music.playing .bars i:nth-child(2){animation-delay:.2s}.music.playing .bars i:nth-child(3){animation-delay:.4s}.music.playing .bars i:nth-child(4){animation-delay:.1s}@keyframes eq{0%,100%{height:4px}50%{height:16px}}
+@media(max-width:760px){nav{padding:0 5vw;height:65px}.navlinks{gap:12px;font-size:8px}.hero{min-height:690px;background-position:58% center}.hero-content{padding:0 6vw 90px}.hero h1{letter-spacing:-3px}.section{padding:75px 6vw}.section-head{display:block}.intro{grid-template-columns:1fr}.intro-photo{min-height:360px}
+.era{grid-template-columns:80px 1fr;gap:6px 14px}.era-year{grid-column:1;grid-row:1;font-size:23px}.era-logo{grid-column:1;grid-row:2;height:64px}.era-logo img{max-width:62px;max-height:62px}.era-logo.duo{flex-direction:column;gap:4px;height:auto}.era-logo.duo img{max-width:38px;max-height:38px}.era-info{grid-column:2;grid-row:1/3}.era-tag{grid-column:2;grid-row:3;text-align:left}
+.trophy-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}.shot:first-child{grid-column:span 2;grid-row:auto}.vertical{display:none}footer{padding:25px 6vw;display:block;line-height:2.2}.music{right:12px;bottom:12px}.music .meta b{max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}}
 </style>
 </head>
 <body>
 <div class="noise"></div>
+
+<!-- NHẠC NỀN: đặt file mp3 cùng thư mục với index.html, rồi sửa MUSIC_FILE + MUSIC_TITLE trong phần script bên dưới -->
+<audio id="bgm" loop preload="auto"></audio>
+
 <div class="toast" id="welcome">
  <div class="intro-card">
   <div class="big7">07</div>
@@ -42,6 +59,13 @@ footer{padding:35px 8vw;display:flex;justify-content:space-between;gap:20px;colo
  </div>
 </div>
 <div class="flash" id="flash"></div>
+
+<div class="music" id="music">
+ <button id="musicBtn" aria-label="Bật/tắt nhạc">▶</button>
+ <div class="meta"><small>Now playing</small><b id="musicTitle">Tên bài hát</b></div>
+ <div class="bars"><i></i><i></i><i></i><i></i></div>
+</div>
+
 <nav><a class="logo" href="#">CR<span>7</span></a><div class="navlinks"><a href="#story">Câu chuyện</a><a href="#career">Sự nghiệp</a><a href="#trophies">Danh hiệu</a><a href="#moments">Khoảnh khắc</a></div></nav>
 <header class="hero">
  <div class="hero-content">
@@ -59,13 +83,14 @@ footer{padding:35px 8vw;display:flex;justify-content:space-between;gap:20px;colo
 </section>
 <section class="section timeline" id="career">
  <div class="section-head"><div><div class="kicker">02 / The journey</div><h2>FROM MADEIRA<br>TO THE WORLD.</h2></div><p>Mỗi màu áo là một chương mới. Mỗi sân vận động là một dấu mốc trong hành trình chinh phục giới hạn.</p></div>
+ <!-- LOGO: lưu ảnh PNG tách nền vào thư mục "logos/" với đúng tên file như bên dưới -->
  <div class="timeline-list">
-  <div class="era"><div class="era-year">2002–03</div><div><h3>Sporting CP</h3><p>Ra mắt đội một ở tuổi 17. Màn trình diễn trước Manchester United mở ra cánh cửa đến nước Anh.</p></div><div class="era-tag">The beginning · Portugal</div></div>
-  <div class="era"><div class="era-year">2003–09</div><div><h3>Manchester United</h3><p>Từ cầu thủ chạy cánh giàu kỹ thuật thành siêu sao. Giành Premier League và Champions League đầu tiên.</p></div><div class="era-tag">The rise · England</div></div>
-  <div class="era"><div class="era-year">2009–18</div><div><h3>Real Madrid</h3><p>Kỷ nguyên bùng nổ: 451 bàn sau 438 trận theo thống kê của Real Madrid, cùng 4 chức vô địch Champions League.</p></div><div class="era-tag">The peak · Spain</div></div>
-  <div class="era"><div class="era-year">2018–21</div><div><h3>Juventus</h3><p>Chinh phục Serie A, tiếp tục khẳng định đẳng cấp săn bàn tại một giải đấu mới.</p></div><div class="era-tag">The challenge · Italy</div></div>
-  <div class="era"><div class="era-year">2021–22</div><div><h3>Manchester United</h3><p>Trở lại Old Trafford, nơi hành trình vươn tầm thế giới từng bắt đầu.</p></div><div class="era-tag">The return · England</div></div>
-  <div class="era"><div class="era-year">2023–NOW</div><div><h3>Al Nassr & Portugal</h3><p>Mở chương mới tại Saudi Arabia, tiếp tục thi đấu và dẫn dắt đội tuyển Bồ Đào Nha.</p></div><div class="era-tag">Still writing history</div></div>
+  <div class="era"><div class="era-year">2002–03</div><div class="era-logo"><img src="logos/sporting.png" alt="Logo Sporting CP" onerror="this.style.display='none'"></div><div class="era-info"><h3>Sporting CP</h3><p>Ra mắt đội một ở tuổi 17. Màn trình diễn trước Manchester United mở ra cánh cửa đến nước Anh.</p></div><div class="era-tag">The beginning · Portugal</div></div>
+  <div class="era"><div class="era-year">2003–09</div><div class="era-logo"><img src="logos/manutd.png" alt="Logo Manchester United" onerror="this.style.display='none'"></div><div class="era-info"><h3>Manchester United</h3><p>Từ cầu thủ chạy cánh giàu kỹ thuật thành siêu sao. Giành Premier League và Champions League đầu tiên.</p></div><div class="era-tag">The rise · England</div></div>
+  <div class="era"><div class="era-year">2009–18</div><div class="era-logo"><img src="logos/realmadrid.png" alt="Logo Real Madrid" onerror="this.style.display='none'"></div><div class="era-info"><h3>Real Madrid</h3><p>Kỷ nguyên bùng nổ: 451 bàn sau 438 trận theo thống kê của Real Madrid, cùng 4 chức vô địch Champions League.</p></div><div class="era-tag">The peak · Spain</div></div>
+  <div class="era"><div class="era-year">2018–21</div><div class="era-logo"><img src="logos/juventus.png" alt="Logo Juventus" onerror="this.style.display='none'"></div><div class="era-info"><h3>Juventus</h3><p>Chinh phục Serie A, tiếp tục khẳng định đẳng cấp săn bàn tại một giải đấu mới.</p></div><div class="era-tag">The challenge · Italy</div></div>
+  <div class="era"><div class="era-year">2021–22</div><div class="era-logo"><img src="logos/manutd.png" alt="Logo Manchester United" onerror="this.style.display='none'"></div><div class="era-info"><h3>Manchester United</h3><p>Trở lại Old Trafford, nơi hành trình vươn tầm thế giới từng bắt đầu.</p></div><div class="era-tag">The return · England</div></div>
+  <div class="era"><div class="era-year">2023–NOW</div><div class="era-logo duo"><img src="logos/alnassr.png" alt="Logo Al Nassr" onerror="this.style.display='none'"><img src="logos/portugal.png" alt="Logo đội tuyển Bồ Đào Nha" onerror="this.style.display='none'"></div><div class="era-info"><h3>Al Nassr & Portugal</h3><p>Mở chương mới tại Saudi Arabia, tiếp tục thi đấu và dẫn dắt đội tuyển Bồ Đào Nha.</p></div><div class="era-tag">Still writing history</div></div>
  </div>
 </section>
 <section class="section trophies" id="trophies">
@@ -94,9 +119,30 @@ footer{padding:35px 8vw;display:flex;justify-content:space-between;gap:20px;colo
 <section class="quote"><small>THE MINDSET</small><blockquote>“YOUR LOVE<br>MAKES ME STRONG.<br>YOUR HATE MAKES ME<br>UNSTOPPABLE.”</blockquote><p>— CRISTIANO RONALDO</p></section>
 <footer><div>CR7 — THE LEGACY</div><div>MADE FOR THE LOVE OF FOOTBALL · SIUUUU!</div></footer>
 <script>
+/* ====== SỬA Ở ĐÂY ====== */
+const MUSIC_FILE  = 'ten-bai.mp3';   // đổi thành tên file nhạc của bạn, ví dụ 'bai-hat.mp3'
+const MUSIC_TITLE = 'Tên bài hát';   // tên hiển thị trên nút nhạc
+const MUSIC_VOLUME = 0.5;            // 0 → 1
+/* ======================= */
+
 const welcome=document.getElementById('welcome'), flash=document.getElementById('flash');
+const bgm=document.getElementById('bgm'), musicBox=document.getElementById('music'), musicBtn=document.getElementById('musicBtn');
+document.getElementById('musicTitle').textContent=MUSIC_TITLE;
+bgm.src=MUSIC_FILE;bgm.volume=MUSIC_VOLUME;
+
+function setPlaying(on){musicBox.classList.toggle('playing',on);musicBtn.textContent=on?'❚❚':'▶';}
+function playMusic(){
+  const p=bgm.play();
+  if(p&&p.then)p.then(()=>setPlaying(true)).catch(()=>setPlaying(false));
+}
+musicBtn.addEventListener('click',()=>{
+  if(bgm.paused)playMusic();else{bgm.pause();setPlaying(false);}
+});
+bgm.addEventListener('error',()=>{document.getElementById('musicTitle').textContent='Chưa có file nhạc';setPlaying(false);});
+
 function cheer(){
-  // Speech is triggered only by a user click so browsers allow playback.
+  // Hạ nhạc nền một chút khi hô "Siuuu" rồi trả lại
+  if(!bgm.paused){bgm.volume=MUSIC_VOLUME*.3;setTimeout(()=>{bgm.volume=MUSIC_VOLUME;},2200);}
   try{
     if('speechSynthesis' in window){
       window.speechSynthesis.cancel();
@@ -118,7 +164,7 @@ function cheer(){
   }catch(e){}
   flash.classList.remove('go');void flash.offsetWidth;flash.classList.add('go');
 }
-document.getElementById('enterBtn').addEventListener('click',()=>{welcome.classList.add('hide');cheer();});
+document.getElementById('enterBtn').addEventListener('click',()=>{welcome.classList.add('hide');cheer();playMusic();});
 document.getElementById('siuuuBtn').addEventListener('click',cheer);
 </script>
 </body>
