@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>CR7 — The Legacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e21b2d;--gold:#d6b46a;--bg:#080808;--muted:#a6a6a6;--line:#292929}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f5f5f5;font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
+.noise{position:fixed;inset:0;pointer-events:none;opacity:.045;z-index:10;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+nav{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;border-bottom:1px solid #ffffff18;position:absolute;top:0;left:0;width:100%;z-index:5}
+.logo{font:900 30px "Barlow Condensed";letter-spacing:2px}.logo span{color:var(--red)}.navlinks{display:flex;gap:30px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#ddd}.navlinks a:hover{color:var(--red)}
+.hero{min-height:760px;height:100vh;max-height:1000px;position:relative;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(90deg,#050505 0%,#050505c9 38%,#05050525 100%),linear-gradient(0deg,#080808 0%,transparent 55%),url("https://images.daznservices.com/di/library/GOAL/3c/db/cristiano-ronaldo_vrowld623jo71v1r2d3eubv68.png?quality=85&w=1800") center 30%/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 45%,#e21b2d18 100%);pointer-events:none}
+.hero-content{position:relative;z-index:2;padding:0 8vw 100px;max-width:900px}.eyebrow{color:var(--red);font-size:11px;letter-spacing:5px;font-weight:700;text-transform:uppercase}.hero h1{font:900 clamp(90px,18vw,230px)/.78 "Barlow Condensed";letter-spacing:-7px;margin:24px 0 18px;text-transform:uppercase}.hero h1 span{color:var(--red);display:block}.hero p{max-width:460px;color:#c7c7c7;line-height:1.7;font-size:14px}.hero-meta{display:flex;align-items:center;gap:18px;margin-top:32px}.siuuu{border:0;background:var(--red);color:white;padding:17px 28px;font:800 19px "Barlow Condensed";letter-spacing:2px;cursor:pointer;clip-path:polygon(0 0,92% 0,100% 25%,100% 100%,8% 100%,0 75%);transition:.2s}.siuuu:hover{background:#ff3347;transform:translateY(-3px)}.siuuu small{font:500 9px "DM Sans";letter-spacing:1px;display:block;margin-top:3px}.scroll{font-size:10px;letter-spacing:3px;color:#aaa;text-transform:uppercase}
+.vertical{position:absolute;right:4vw;bottom:100px;writing-mode:vertical-rl;letter-spacing:5px;font:700 12px "Barlow Condensed";color:#ffffff75;z-index:2}
+.section{padding:110px 8vw}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:48px}.kicker{color:var(--red);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700}.section h2{font:800 clamp(48px,8vw,92px)/.9 "Barlow Condensed";text-transform:uppercase;margin:12px 0 0}.section-head p{max-width:350px;color:var(--muted);font-size:13px;line-height:1.7}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center;background:#101010}.intro-photo{min-height:520px;background:url("https://images.daznservices.com/di/library/GOAL/3c/db/cristiano-ronaldo_vrowld623jo71v1r2d3eubv68.png?quality=85&w=1400") center/cover;filter:grayscale(100%);position:relative}.intro-photo:after{content:"CR7";position:absolute;bottom:-32px;right:-15px;font:900 130px "Barlow Condensed";color:var(--red)}.intro-copy h3{font:800 50px/1 "Barlow Condensed";margin:10px 0 20px}.intro-copy p{color:#aaa;font-size:14px;line-height:1.9}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}.stat{border-top:1px solid var(--red);padding-top:15px}.stat strong{display:block;font:800 42px "Barlow Condensed"}.stat span{font-size:9px;letter-spacing:2px;color:#999;text-transform:uppercase}
+.timeline{background:#0b0b0b}.timeline-list{border-top:1px solid var(--line)}.era{display:grid;grid-template-columns:130px 1fr 1fr;gap:25px;padding:28px 0;border-bottom:1px solid var(--line);align-items:center;transition:.25s}.era:hover{padding-left:14px;background:linear-gradient(90deg,#e21b2d12,transparent)}.era-year{font:800 30px "Barlow Condensed";color:var(--red)}.era h3{font:700 27px "Barlow Condensed";margin:0 0 5px;text-transform:uppercase}.era p{margin:0;color:#999;font-size:12px;line-height:1.6}.era-tag{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;text-align:right}
+.trophies{background:#111}.trophy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.trophy{background:#111;padding:30px 24px;min-height:180px;transition:.25s}.trophy:hover{background:#1a1112}.trophy .num{font:900 62px/.9 "Barlow Condensed";color:var(--red)}.trophy h3{font:700 19px "Barlow Condensed";text-transform:uppercase;margin:14px 0 6px}.trophy p{font-size:11px;color:#888;margin:0;line-height:1.5}
+.gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:220px 220px;gap:12px}.shot{position:relative;overflow:hidden;background:#222}.shot:first-child{grid-row:span 2}.shot img{width:100%;height:100%;object-fit:cover;filter:grayscale(35%);transition:.5s}.shot:hover img{transform:scale(1.06);filter:grayscale(0)}.shot label{position:absolute;bottom:15px;left:16px;font:700 23px "Barlow Condensed";text-transform:uppercase;text-shadow:0 2px 10px #000}
+.quote{padding:100px 8vw;text-align:center;background:var(--red)}.quote small{letter-spacing:5px;font-size:10px}.quote blockquote{font:900 clamp(42px,8vw,100px)/.9 "Barlow Condensed";text-transform:uppercase;margin:25px auto;max-width:1000px}.quote p{font-size:11px;letter-spacing:3px}
+footer{padding:35px 8vw;display:flex;justify-content:space-between;gap:20px;color:#777;font-size:10px;letter-spacing:2px;text-transform:uppercase;border-top:1px solid var(--line)}
+.toast{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;background:#050505f2;opacity:1;transition:opacity .7s,visibility .7s}.toast.hide{opacity:0;visibility:hidden;pointer-events:none}.intro-card{text-align:center;padding:30px}.intro-card .big7{font:900 clamp(140px,30vw,300px)/.75 "Barlow Condensed";color:#191919;-webkit-text-stroke:2px #333}.intro-card h2{font:900 clamp(48px,9vw,100px)/.9 "Barlow Condensed";margin:20px 0}.intro-card p{color:#999;font-size:12px;letter-spacing:3px;margin-bottom:28px}.enter{border:1px solid var(--red);color:#fff;background:transparent;padding:16px 35px;font:800 20px "Barlow Condensed";letter-spacing:3px;cursor:pointer}.enter:hover{background:var(--red)}
+.flash{position:fixed;inset:0;z-index:19;background:#fff;pointer-events:none;opacity:0}.flash.go{animation:flash .65s ease-out}@keyframes flash{0%{opacity:.9}100%{opacity:0}}
+@media(max-width:760px){nav{padding:0 5vw;height:65px}.navlinks{gap:12px;font-size:8px}.hero{min-height:690px;background-position:58% center}.hero-content{padding:0 6vw 90px}.hero h1{letter-spacing:-3px}.section{padding:75px 6vw}.section-head{display:block}.intro{grid-template-columns:1fr}.intro-photo{min-height:360px}.era{grid-template-columns:80px 1fr;gap:12px}.era-tag{grid-column:2;text-align:left}.era-year{font-size:23px}.trophy-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}.shot:first-child{grid-column:span 2;grid-row:auto}.vertical{display:none}footer{padding:25px 6vw;display:block;line-height:2.2}}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="toast" id="welcome">
+ <div class="intro-card">
+  <div class="big7">07</div>
+  <div class="eyebrow">A tribute to a football icon</div>
+  <h2>THE MAN.<br><span style="color:var(--red)">THE MYTH.</span> THE GOAT.</h2>
+  <p>ONE CAREER. ONE NUMBER. ONE LEGACY.</p>
+  <button class="enter" id="enterBtn">BƯỚC VÀO HUYỀN THOẠI ↗</button>
+ </div>
+</div>
+<div class="flash" id="flash"></div>
+<nav><a class="logo" href="#">CR<span>7</span></a><div class="navlinks"><a href="#story">Câu chuyện</a><a href="#career">Sự nghiệp</a><a href="#trophies">Danh hiệu</a><a href="#moments">Khoảnh khắc</a></div></nav>
+<header class="hero">
+ <div class="hero-content">
+  <div class="eyebrow">Cristiano Ronaldo dos Santos Aveiro · Portugal</div>
+  <h1>THE <span>LEGACY</span></h1>
+  <p>Từ cậu bé Madeira đến biểu tượng của bóng đá thế giới. Một hành trình được viết bằng khát vọng, kỷ luật và những bàn thắng không tưởng.</p>
+  <div class="hero-meta"><button class="siuuu" id="siuuuBtn">SIUUUU!<small>NHẤN ĐỂ ĂN MỪNG</small></button><span class="scroll">Scroll to explore ↓</span></div>
+ </div><div class="vertical">THE LEGEND NEVER STOPS</div>
+</header>
+<section class="section intro" id="story">
+ <div class="intro-photo"></div>
+ <div class="intro-copy"><div class="kicker">01 / The story</div><h3>BUILT DIFFERENT.<br><span style="color:var(--red)">BORN TO WIN.</span></h3>
+ <p>Sinh ngày 5/2/1985 tại Funchal, Madeira, Bồ Đào Nha, Cristiano Ronaldo bắt đầu hành trình chuyên nghiệp ở Sporting CP khi mới 17 tuổi. Tốc độ, sức bật, kỹ thuật và tinh thần tập luyện phi thường đã đưa anh từ một tài năng trẻ trở thành một trong những cầu thủ vĩ đại nhất lịch sử.</p>
+ <div class="stats"><div class="stat"><strong>5</strong><span>Ballon d'Or</span></div><div class="stat"><strong>5</strong><span>Champions League</span></div><div class="stat"><strong>7</strong><span>Số áo biểu tượng</span></div></div></div>
+</section>
+<section class="section timeline" id="career">
+ <div class="section-head"><div><div class="kicker">02 / The journey</div><h2>FROM MADEIRA<br>TO THE WORLD.</h2></div><p>Mỗi màu áo là một chương mới. Mỗi sân vận động là một dấu mốc trong hành trình chinh phục giới hạn.</p></div>
+ <div class="timeline-list">
+  <div class="era"><div class="era-year">2002–03</div><div><h3>Sporting CP</h3><p>Ra mắt đội một ở tuổi 17. Màn trình diễn trước Manchester United mở ra cánh cửa đến nước Anh.</p></div><div class="era-tag">The beginning · Portugal</div></div>
+  <div class="era"><div class="era-year">2003–09</div><div><h3>Manchester United</h3><p>Từ cầu thủ chạy cánh giàu kỹ thuật thành siêu sao. Giành Premier League và Champions League đầu tiên.</p></div><div class="era-tag">The rise · England</div></div>
+  <div class="era"><div class="era-year">2009–18</div><div><h3>Real Madrid</h3><p>Kỷ nguyên bùng nổ: 451 bàn sau 438 trận theo thống kê của Real Madrid, cùng 4 chức vô địch Champions League.</p></div><div class="era-tag">The peak · Spain</div></div>
+  <div class="era"><div class="era-year">2018–21</div><div><h3>Juventus</h3><p>Chinh phục Serie A, tiếp tục khẳng định đẳng cấp săn bàn tại một giải đấu mới.</p></div><div class="era-tag">The challenge · Italy</div></div>
+  <div class="era"><div class="era-year">2021–22</div><div><h3>Manchester United</h3><p>Trở lại Old Trafford, nơi hành trình vươn tầm thế giới từng bắt đầu.</p></div><div class="era-tag">The return · England</div></div>
+  <div class="era"><div class="era-year">2023–NOW</div><div><h3>Al Nassr & Portugal</h3><p>Mở chương mới tại Saudi Arabia, tiếp tục thi đấu và dẫn dắt đội tuyển Bồ Đào Nha.</p></div><div class="era-tag">Still writing history</div></div>
+ </div>
+</section>
+<section class="section trophies" id="trophies">
+ <div class="section-head"><div><div class="kicker">03 / The honours</div><h2>NUMBERS<br>THAT SPEAK.</h2></div><p>Những cột mốc tiêu biểu trong bộ sưu tập danh hiệu của CR7.</p></div>
+ <div class="trophy-grid">
+  <div class="trophy"><div class="num">05</div><h3>Ballon d'Or</h3><p>2008 · 2013 · 2014 · 2016 · 2017</p></div>
+  <div class="trophy"><div class="num">05</div><h3>UEFA Champions League</h3><p>1 cùng Manchester United · 4 cùng Real Madrid</p></div>
+  <div class="trophy"><div class="num">01</div><h3>UEFA Euro</h3><p>Vô địch cùng Bồ Đào Nha năm 2016</p></div>
+  <div class="trophy"><div class="num">02</div><h3>UEFA Nations League</h3><p>2019 · 2025</p></div>
+  <div class="trophy"><div class="num">03</div><h3>Premier League</h3><p>Manchester United · 2007, 2008, 2009</p></div>
+  <div class="trophy"><div class="num">02</div><h3>La Liga</h3><p>Real Madrid · 2012, 2017</p></div>
+  <div class="trophy"><div class="num">02</div><h3>Serie A</h3><p>Juventus · 2019, 2020</p></div>
+  <div class="trophy"><div class="num">02</div><h3>The Best FIFA</h3><p>2016 · 2017</p></div>
+ </div>
+</section>
+<section class="section" id="moments">
+ <div class="section-head"><div><div class="kicker">04 / The moments</div><h2>ICONIC IN<br>EVERY COLOUR.</h2></div><p>Năm tháng trôi qua, những khoảnh khắc ấy vẫn sống mãi trong ký ức người hâm mộ.</p></div>
+ <div class="gallery-grid">
+  <div class="shot"><img src="https://images.daznservices.com/di/library/GOAL/3c/db/cristiano-ronaldo_vrowld623jo71v1r2d3eubv68.png?quality=85&w=1400" alt="Ronaldo qua các màu áo"><label>THE NUMBER 7</label></div>
+  <div class="shot"><img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/4YZ7KZMC75DJZCRNUXDGZA7YZY.jpg" alt="Ronaldo trong màu áo Real Madrid"><label>THE GALÁCTICO</label></div>
+  <div class="shot"><img src="https://static.sky.it/editorialimages/25c1b23f3d36ca9b32814fff316e5daa4f6ca860/skytg24/it/sport/2025/02/05/compleanno-cristiano-ronaldo-40-anni/Ronaldo_composite.jpg?im=Resize" alt="Ronaldo ăn mừng"><label>THE CELEBRATION</label></div>
+  <div class="shot"><img src="https://img.jagranjosh.com/images/2025/August/1282025/Untitled-design-%2837%29.webp" alt="Ronaldo Al Nassr"><label>THE NEXT CHAPTER</label></div>
+  <div class="shot"><img src="https://library.sportingnews.com/styles/crop_style_16_9_mobile_2x/s3/2023-05/sporting-news-2022_three--way-split-82329389-24c5-41c3-bb9d-2bbf459aa421.png?h=920929c4&itok=zBVJkrEE" alt="Ronaldo trong màu áo Bồ Đào Nha"><label>FOREVER PORTUGAL</label></div>
+ </div>
+</section>
+<section class="quote"><small>THE MINDSET</small><blockquote>“YOUR LOVE<br>MAKES ME STRONG.<br>YOUR HATE MAKES ME<br>UNSTOPPABLE.”</blockquote><p>— CRISTIANO RONALDO</p></section>
+<footer><div>CR7 — THE LEGACY</div><div>MADE FOR THE LOVE OF FOOTBALL · SIUUUU!</div></footer>
+<script>
+const welcome=document.getElementById('welcome'), flash=document.getElementById('flash');
+function cheer(){
+  // Speech is triggered only by a user click so browsers allow playback.
+  try{
+    if('speechSynthesis' in window){
+      window.speechSynthesis.cancel();
+      const msg=new SpeechSynthesisUtterance('Siiiiiuuuuu!');
+      msg.lang='en-US';msg.rate=.78;msg.pitch=.72;msg.volume=1;
+      window.speechSynthesis.speak(msg);
+    }
+  }catch(e){}
+  try{
+    const Ctx=window.AudioContext||window.webkitAudioContext;
+    if(Ctx){
+      const ctx=new Ctx(), now=ctx.currentTime;
+      const master=ctx.createGain();master.gain.setValueAtTime(.0001,now);master.gain.exponentialRampToValueAtTime(.18,now+.08);master.gain.exponentialRampToValueAtTime(.0001,now+1.8);master.connect(ctx.destination);
+      const osc=ctx.createOscillator(),g=ctx.createGain();osc.type='sawtooth';osc.frequency.setValueAtTime(105,now);osc.frequency.exponentialRampToValueAtTime(260,now+.45);osc.frequency.exponentialRampToValueAtTime(80,now+1.5);g.gain.value=.16;osc.connect(g);g.connect(master);osc.start(now);osc.stop(now+1.6);
+      const buffer=ctx.createBuffer(1,ctx.sampleRate*1.5,ctx.sampleRate),data=buffer.getChannelData(0);for(let i=0;i<data.length;i++)data[i]=(Math.random()*2-1)*.4;
+      const noise=ctx.createBufferSource(),filter=ctx.createBiquadFilter(),ng=ctx.createGain();noise.buffer=buffer;filter.type='lowpass';filter.frequency.value=650;ng.gain.setValueAtTime(.0001,now);ng.gain.exponentialRampToValueAtTime(.12,now+.12);ng.gain.exponentialRampToValueAtTime(.0001,now+1.4);noise.connect(filter);filter.connect(ng);ng.connect(ctx.destination);noise.start(now);noise.stop(now+1.5);
+      setTimeout(()=>ctx.close(),2200);
+    }
+  }catch(e){}
+  flash.classList.remove('go');void flash.offsetWidth;flash.classList.add('go');
+}
+document.getElementById('enterBtn').addEventListener('click',()=>{welcome.classList.add('hide');cheer();});
+document.getElementById('siuuuBtn').addEventListener('click',cheer);
+</script>
+</body>
+</html>
